@@ -1,10 +1,10 @@
 import random
-import steps
 import word
 from asciiart import logo
 from asciiart import welcome
 from asciiart import won
 from asciiart import lose
+from asciiart import step
 list1 = []
 
 print(logo)
@@ -24,7 +24,7 @@ while end_of_game == False:
             list1[i] = guess
     if guess not in chosen_word:
         print(f"{guess} is not in the word")
-        print(steps.step[lives])
+        print(step[lives])
         lives+=1
         if lives == 7:
             end_of_game=True
